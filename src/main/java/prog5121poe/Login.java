@@ -35,4 +35,9 @@ public boolean checkPasswordComplexity() {
             && hasNumber
             && hasSpecial;
 }
+    // Checks that the cellphone number uses the
+// South African international +27 format.
+public boolean checkCellPhoneNumber() {
+    return cellPhoneNumber.matches("^\\+27\\d{9}$");
+}
 }
