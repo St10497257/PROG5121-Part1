@@ -23,4 +23,16 @@ public class Login {
 public boolean checkUserName() {
     return username.contains("_") && username.length() <= 5;
 }
+    // Password must contain at least 8 characters,
+// a capital letter, a number and a special character.
+public boolean checkPasswordComplexity() {
+    boolean hasCapital = password.matches(".*[A-Z].*");
+    boolean hasNumber = password.matches(".*[0-9].*");
+    boolean hasSpecial = password.matches(".*[^a-zA-Z0-9].*");
+
+    return password.length() >= 8
+            && hasCapital
+            && hasNumber
+            && hasSpecial;
+}
 }
