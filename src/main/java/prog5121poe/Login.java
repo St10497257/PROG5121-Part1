@@ -35,10 +35,17 @@ public boolean checkPasswordComplexity() {
             && hasNumber
             && hasSpecial;
 }
-    // Checks that the cellphone number uses the
-// South African international +27 format.
+//
+ * Regular expression syntax reference:
+ * Oracle. Java Platform, Standard Edition - Pattern Class.
+ * https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html
+ * Accessed: 17 September 2026.
+ *
+ * The expression checks for +27 followed by exactly nine digits.
+ //
 public boolean checkCellPhoneNumber() {
     return cellPhoneNumber.matches("^\\+27\\d{9}$");
+}
 }
     public String registerUser() {
 
