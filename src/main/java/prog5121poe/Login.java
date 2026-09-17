@@ -17,5 +17,10 @@ public class Login {
         this.cellPhoneNumber = cellPhoneNumber;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
+} 
+// Username must contain an underscore and
+// must not be more than five characters long.
+public boolean checkUserName() {
+    return username.contains("_") && username.length() <= 5;
+}
 }
